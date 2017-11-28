@@ -1,0 +1,24 @@
+<h1>Recipe List</h1><br>
+<%= link_to 'Welcome', controller: 'welcome' %><br>
+<%= link_to 'New Recipe', controller: 'recipes', action: 'new' %>
+<%= link_to 'Recipe List', controller: 'recipes' %>
+
+<table>
+    <tr>
+        <th>Recipe Name</th>
+        <th>Author</th>
+    </tr>
+    
+    <% @recipe.each do |recipe| %>
+    <tr>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.author %></td>
+        <td><%= link_to 'Show', recipe_path(recipe) %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy',
+                                recipe_path(recipe),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</table>
