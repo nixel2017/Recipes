@@ -39,7 +39,7 @@ class RecipesController < ApplicationController
         @recipe = CreateRecipe.find(params[:id])
         @recipe.destroy
         
-        redirect_to recipess_path
+        redirect_to recipes_path
     end
 end
 
