@@ -3,17 +3,6 @@ class RecipesController < ApplicationController
         @recipe = CreateRecipe.new
     end
     
-    def create
-        @recipe = CreateRecipe.new(recipe_params)
-        
-        if @recipe.save
-        redirect_to '/recipes'
-        else 
-        render 'new'
-        end
-    
-    end
-    
     def show
         @recipe = CreateRecipe.find(params[:id])
     end
@@ -22,15 +11,25 @@ class RecipesController < ApplicationController
         @recipe = CreateRecipe.all
     end
     
+    def create
+        @recipe = CreateRecipe.new(recipe_params)
+        
+        
+        if @recipe.save
+            
+            redirect_to '/recipes'
+        else
+            render 'new'
+        end
+    end
     def edit
         @recipe = CreateRecipe.find(params[:id])
     end
     
     def update
         @recipe = CreateRecipe.find(params[:id])
-        
         if @recipe.update(recipe_params)
-            redirect_to @recipe
+            redirect_to '/recipes'
         else
             render 'edit'
         end
@@ -40,9 +39,10 @@ class RecipesController < ApplicationController
         @recipe = CreateRecipe.find(params[:id])
         @recipe.destroy
         
-        redirect_to recipes_path
+        redirect_to recipess_path
     end
 end
+
 
 private
     def recipe_params
