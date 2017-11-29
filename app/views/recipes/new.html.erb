@@ -1,5 +1,11 @@
-<h1>New Recipe</h1><br>
-<%= link_to 'Welcome', controller: 'welcome' %><br>
-<%= link_to 'New Recipe', controller: 'recipes', action: 'new' %>
-<%= link_to 'Recipe List', controller: 'recipes' %>
+<h1>New Recipe</h1>
+
+<nav id="topNav">
+    <ul>
+    <li><%= link_to 'Welcome', controller: 'welcome' %></li>
+    <li><%= link_to 'New Recipe', controller: 'recipes', action: 'new' %></li>
+    <li><%= link_to 'Recipe List', controller: 'recipes' %></li>
+    </ul>
+</nav>
+
 <%= render 'form' %>
