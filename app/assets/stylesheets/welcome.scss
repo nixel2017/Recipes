@@ -1,38 +1,56 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-image: url('/assets/recipesBackground.jpg');
+}
+
 h1 {
-    font-size: 32px;
-    color: white;
-    font-family: verdana;
+    font-size: 54px;
+    color: #383838;
+    font-family: Comic Sans MS;
     text-align: center;
 }
 
-body{
-    background: limegreen;
+#topNav ul {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+    margin: 10px 0px;
 }
 
-a:link, a:visited {
+#topNav li {
+    list-style: none;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+    display: inline-block;
+    width: 250px;
+    border-bottom: none;
+    height: 55px;
+    line-height: 55px;
+    font-size: 30px;
+    font-family: Comic Sans MS;
+    color: #383838;
+    font-weight: bold;
+}
+
+#topNav a {
     text-decoration: none;
-    font-family: verdana;
-}
-    
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: blue;
-}
-
-li {
-    float: left;
-}
-
-li a {
+    color: #383838;
     display: block;
-    color: red;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    transition: .3s background-color;
+}
+
+.content {
+    font-family: Comic Sans MS;
+    color: #383838;
+    display: inline-block;
+}
+
+input[type=submit] {
+    font-family: Comic Sans MS;
+    border-radius: 12px;
+    color: #383838;
+    border: 2px solid #383838;
 }
