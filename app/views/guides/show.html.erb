@@ -1,5 +1,3 @@
-<h1>Welcome to Recipes</h1>
-
 <nav id="topNav">
     <ul>
     <li><%= link_to 'Welcome', controller: 'welcome' %></li>
@@ -8,3 +6,18 @@
     </ul>
 </nav>
 
+<p>
+<strong>Recipe Name</strong>
+<%= @guide.name %>
+<br>
+<strong>Author:</strong>
+<%= @guide.author %>
+<br>
+
+<h2>Steps</h2>
+<% @guide.tasks.each do |task| %>
+<p>
+<br>
+<%= task.body %>
+</p>
+<% end %>

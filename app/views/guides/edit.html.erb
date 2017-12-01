@@ -1,0 +1,31 @@
+<h1>Edit Recipe</h1>
+
+<%= form_for :guide, url: guide_path(@guide), method: :patch do |f| %>
+<p>
+   <%= f.label :name %> <%= f.text_field :name %>
+   <br>
+   <%= f.label :author %> <%= f.text_field :author %>
+<br>
+   <%= f.submit %>
+   <% end %>
+ 
+ <h2>Steps</h2>
+<% @guide.tasks.each do |task| %>
+<p>
+<br>
+<%= task.body %>
+</p>
+<% end %>
+
+<h2>Add a Step</h2>
+<%= form_for([@guide, @guide.tasks.build]) do |f| %>
+<p>
+   <%= f.text_area :body %>
+</p>
+<p>
+<%= f.submit %>
+</p>
+<% end %>
+<%= link_to 'Back', guides_path %>
+
+
