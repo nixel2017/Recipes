@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   
   resources :guides do
     resources :tasks
+    resources :comments
   end
 
   root 'welcome#index'
