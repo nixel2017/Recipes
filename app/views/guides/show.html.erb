@@ -1,3 +1,5 @@
+<h1>"Website Name"</h1>
+
 <nav id="topNav">
     <ul>
     <li><%= link_to 'Welcome', controller: 'welcome' %></li>
@@ -6,10 +8,11 @@
     </ul>
 </nav>
 
+<div id="showRecipe"
 <p>
 <strong>Recipe Name</strong>
 <%= @guide.name %>
-<br>
+<br><br>
 <strong>Author:</strong>
 <%= @guide.author %>
 <br>
@@ -51,3 +54,4 @@
 </p>
 <% end %>
 <%= link_to 'Back', guides_path %>
+</div>
