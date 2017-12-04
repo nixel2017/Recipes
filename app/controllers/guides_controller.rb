@@ -17,7 +17,7 @@ class GuidesController < ApplicationController
         
         if @guide.save
             
-            redirect_to '/guides'
+            redirect_to edit_guide_path(@guide)
         else
             render 'new'
         end
@@ -46,5 +46,5 @@ end
 
 private
     def guide_params
-        params.require(:guide).permit(:name, :author)
+        params.require(:guide).permit(:name, :author, :difficulty, :ingredients)
     end
