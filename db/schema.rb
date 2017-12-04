@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 20171129193417) do
     t.text "body"
     t.integer "recipe_id"
     t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "updated_at", null: fals
     t.index ["recipe_id"], name: "index_steps_on_recipe_id"
   end
 
