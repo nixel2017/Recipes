@@ -1,12 +1,9 @@
-<h1>Edit Recipe</h1>
-
-<%= form_for :recipe, url: recipe_path(@recipe), method: :patch do |f| %>
+<%= form_for :guide, url: guides_path do |f| %>
 <p>
    <%= f.label :name %> <%= f.text_field :name %>
    <br>
    <%= f.label :author %> <%= f.text_field :author %>
-<br>
+<br><br>
    <%= f.submit %>
    <% end %>
- 
-<%= link_to 'Back', recipes_path %>
+</p>

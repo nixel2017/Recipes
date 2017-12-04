@@ -1,0 +1,53 @@
+<nav id="topNav">
+    <ul>
+    <li><%= link_to 'Welcome', controller: 'welcome' %></li>
+    <li><%= link_to 'New Recipe', controller: 'guides', action: 'new' %></li>
+    <li><%= link_to 'Recipe List', controller: 'guides' %></li>
+    </ul>
+</nav>
+
+<p>
+<strong>Recipe Name</strong>
+<%= @guide.name %>
+<br>
+<strong>Author:</strong>
+<%= @guide.author %>
+<br>
+
+<h2>Steps</h2>
+<% @guide.tasks.each do |task| %>
+<p>
+<br>
+<%= task.body %>
+</p>
+<% end %>
+
+<h2>Comments</h2>
+<% @guide.comments.each do |comment| %>
+<p>
+    <strong>Commenter Name:</strong>
+    <%= comment.commenter %>
+</p>
+<p>
+<strong>Comment:</strong>
+    <%= comment.body %>
+</p>
+<% end %>
+
+<h2>Add a Comment:</h2>
+<%= form_for([@guide, @guide.comments.build]) do |f| %>
+<p>
+    <%= f.label :commenter %> <br>
+    <%= f.text_field :commenter %>
+    
+</p>
+<p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
+<%= link_to 'Back', guides_path %>

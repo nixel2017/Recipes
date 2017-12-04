@@ -1,0 +1,30 @@
+<h1>Recipe List</h1>
+
+<nav id="topNav">
+    <ul>
+    <li><%= link_to 'Welcome', controller: 'welcome' %></li>
+    <li><%= link_to 'New Recipe', controller: 'guides', action: 'new' %></li>
+    <li><%= link_to 'Recipe List', controller: 'guides' %></li>
+    </ul>
+</nav>
+
+
+<table>
+    <tr>
+        <th>Recipe Name</th>
+        <th>Author</th>
+    </tr>
+    
+    <% @guide.each do |guide| %>
+    <tr>
+        <td><%= guide.name %></td>
+        <td><%= guide.author %></td>
+        <td><%= link_to 'Show', guide_path(guide) %></td>
+        <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
+        <td><%= link_to 'Destroy',
+                                guide_path(guide),
+                                method: :delete,
+                                data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+    <% end %>
+</table>
