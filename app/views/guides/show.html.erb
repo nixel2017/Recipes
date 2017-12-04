@@ -13,6 +13,12 @@
 <strong>Author:</strong>
 <%= @guide.author %>
 <br>
+<strong>Difficulty:</strong>
+<%= @guide.difficulty %>
+<br>
+<strong>Ingredients:</strong>
+<%= @guide.ingredients %>
+<br>
 
 <h2>Steps</h2>
 <% @guide.tasks.each do |task| %>
@@ -45,6 +51,7 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
 </p>
+
 
 <p>
     <%= f.submit %>

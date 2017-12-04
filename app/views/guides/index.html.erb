@@ -13,12 +13,14 @@
     <tr>
         <th>Recipe Name</th>
         <th>Author</th>
+        <th>Difficulty</th>
     </tr>
     
     <% @guide.each do |guide| %>
     <tr>
         <td><%= guide.name %></td>
         <td><%= guide.author %></td>
+        <td><%= guide.difficulty %></td>
         <td><%= link_to 'Show', guide_path(guide) %></td>
         <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
         <td><%= link_to 'Destroy',
