@@ -24,9 +24,13 @@
         <td><%= link_to 'Show', guide_path(guide) %></td>
         <td><%= link_to 'Edit', edit_guide_path(guide) %></td>
         <td><%= link_to 'Destroy',
+        <td><%= link_to 'Show', guide_path(guide) %>
+        <%= link_to 'Edit', edit_guide_path(guide) %>
+        <%= link_to 'Destroy',
                                 guide_path(guide),
                                 method: :delete,
-                                data: { confirm: 'Are you sure?' } %></td>
+                                data: { confirm: 'Are you sure?' } %>
+        </td>
     </tr>
     <% end %>
 </table>

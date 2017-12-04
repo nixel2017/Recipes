@@ -12,6 +12,12 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    font-size: 25px;
+    color: #383838;
+    font-family: Comic Sans MS;
+}
+
 #topNav ul {
     list-style: none;
     text-align: center;
@@ -54,3 +60,36 @@ input[type=submit] {
     color: #383838;
     border: 2px solid #383838;
 }
+
+#newRecipe {
+    font-family: Comic Sans MS;
+    padding-left: 25%;
+}
+
+table {
+    font-family: Comic Sans MS;
+    border-spacing: 120px 10px;
+    margin: auto;
+    
+}    
+    
+    
+#recipeSteps {
+    font-family: Comic Sans MS;
+    margin: auto;
+    width: 55%;
+}
+    
+#showRecipe {
+    font-family: Comic Sans MS;
+    margin: auto;
+    width: 55%;
+}
+    
+    
+    
+    
+    
+    
+    
+    

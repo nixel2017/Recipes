@@ -1,12 +1,16 @@
 <%= form_for :guide, url: guides_path do |f| %>
-<p>
-   <%= f.label :name %> <%= f.text_field :name %>
+<p id="newRecipe">
    <br>
+   <%= f.label :name %> <%= f.text_field :name %>
+   <br><br>
    <%= f.label :author %> <%= f.text_field :author %>
 <br>
 <%= f.label :difficulty %> <%= f.text_field :difficulty %>
 <br>
 <%= f.label :ingredients %> <%= f.text_area :ingredients %>
 <br>
+   <br><br>
+
    <%= f.submit %>
    <% end %>
+</p>
