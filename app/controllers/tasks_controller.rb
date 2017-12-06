@@ -4,6 +4,11 @@ class TasksController < ApplicationController
         @task = @guide.tasks.create(task_params)
         redirect_to guide_path(@guide)
     end
+    
+    def edit
+        @guide = Guide.find(params[:id])
+    end
+    
     def destroy
         @task = Guide.find(params[:id])
         @task.destroy
