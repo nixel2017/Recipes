@@ -8,7 +8,7 @@
 </nav>
 
 
-<div id="recipeSteps" >
+<div id="recipeSteps">
 <%= form_for :guide, url: guide_path(@guide), method: :patch do |f| %>
 <p>
    <%= f.label :name %> <%= f.text_field :name %>
@@ -16,7 +16,7 @@
    <%= f.label :author %> <%= f.text_field :author %>
 <br>
 <%= f.label :difficulty %> <%= f.text_field :difficulty %>
-<br>
+<br><br>
 <%= f.label :ingredients %> <%= f.text_area :ingredients %>
 <br>
 <br><br>
@@ -32,6 +32,7 @@
 <%= task.body %>
 </p>
 <p>
+    
     <%= link_to 'Delete Step', [task.guide, task],
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
