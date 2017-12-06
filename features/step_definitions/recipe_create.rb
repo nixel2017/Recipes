@@ -23,19 +23,12 @@ end
 When("I press {string}") do |string|
   click_button(string)
 end
-Then("it should destroy a recipe") do
-  expect { click_link 'Destroy' }.to change(recipe, :count).by(-1)
-end
 When("I dump the response") do
   puts body
 end
-Given("the following recipe exists") do |table|
-  # table is a Cucumber::MultilineArgument::DataTable
-  table.hashes.each do |hash|
-    @guide
-  end
+Then("I enter {string} as my {string}") do |string, string2|
+  string = string2
 end
-
-Then("I should not see {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+Then("I hit the enter key") do
+  element.send_keys :enter
 end
