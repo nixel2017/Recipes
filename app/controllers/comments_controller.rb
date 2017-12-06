@@ -5,6 +5,12 @@ class CommentsController < ApplicationController
         redirect_to guide_path(@guide)
     end
     
+    def destroy
+        @guide = Guide.find(params[:guide_id])
+        @comment = @guide.comments.find(params[:id])
+        @comment.destroy
+        redirect_to guide_path(@guide)
+    end
     private
         def comment_params
             params.require(:comment).permit(:commenter, :body)
