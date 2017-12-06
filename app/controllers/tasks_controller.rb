@@ -2,7 +2,7 @@ class TasksController < ApplicationController
     def create
         @guide = Guide.find(params[:guide_id])
         @task = @guide.tasks.create(task_params)
-        redirect_to guide_path(@guide)
+        redirect_to edit_guide_path(@guide)
     end
     
 
