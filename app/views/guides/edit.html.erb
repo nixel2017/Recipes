@@ -1,6 +1,14 @@
 <h1>Edit Recipe</h1>
+<nav id="topNav">
+    <ul>
+    <li><%= link_to 'Welcome', controller: 'welcome' %></li>
+    <li><%= link_to 'New Recipe', controller: 'guides', action: 'new' %></li>
+    <li><%= link_to 'Recipe List', controller: 'guides' %></li>
+    </ul>
+</nav>
 
-<div id="recipeSteps"
+
+<div id="recipeSteps" >
 <%= form_for :guide, url: guide_path(@guide), method: :patch do |f| %>
 <p>
    <%= f.label :name %> <%= f.text_field :name %>
@@ -12,8 +20,9 @@
 <%= f.label :ingredients %> <%= f.text_area :ingredients %>
 <br>
 <br><br>
-
+<p>
    <%= f.submit %>
+   </p>
    <% end %>
  
 <h2>Steps</h2>
@@ -38,7 +47,7 @@
 <%= f.submit %>
 </p>
 <% end %>
-<%= link_to 'Save', guides_path %>
+<%= link_to 'Back', guides_path %>
 </div>
 
 
