@@ -29,7 +29,7 @@ class GuidesController < ApplicationController
     def update
         @guide = Guide.find(params[:id])
         if @guide.update(guide_params)
-            redirect_to '/guides'
+            redirect_to guide_path(@guide)
         else
             render 'edit'
         end
