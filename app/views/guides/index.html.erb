@@ -21,6 +21,7 @@ recipe from this page." %></strong></p>
     
     <% @guide.each do |guide| %>
     <tr>
+        <td><%= image_tag guide.image.url(:thumb) %></td>
         <td><%= guide.name %></td>
         <td><%= guide.author %></td>
         <td><%= guide.difficulty %></td>

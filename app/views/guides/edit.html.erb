@@ -11,6 +11,9 @@
 <div id="recipeSteps">
 <%= form_for :guide, url: guide_path(@guide), method: :patch do |f| %>
 <p>
+    <br>
+   <%= f.label :image %> <%= f.file_field :image %>
+   <br><br>
    <%= f.label :name %> <%= f.text_field :name %>
    <br><br>
    <%= f.label :author %> <%= f.text_field :author %>
