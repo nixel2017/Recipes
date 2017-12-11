@@ -63,6 +63,7 @@ input[type=submit] {
     border-radius: 12px;
     color: #383838;
     border: 2px solid #383838;
+    margin-left:27%;
 }
 
 #newRecipe {
@@ -90,6 +91,14 @@ table {
     width: 55%;
 }
 
+label {
+	
+	float:left;
+	width: 25%;
+	text-align:right;
+}
+    form p{
+text-align:left;
 footer {
     position:fixed;bottom:0;
 
@@ -97,11 +106,17 @@ footer {
     display:block;
 }
 
+    input{
+	margin-left:1em;
+
+}
+
+textarea{
+margin-left:1em;
+width:40%;
+height:100px;
+}
     
-    
-    
-    
-    
-    
+    }
     
     

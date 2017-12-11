@@ -12,7 +12,7 @@
 <p>
 <strong>Recipe Name</strong>
 <%= @guide.name %>
-<br><br>
+<br>
 <strong>Author:</strong>
 <%= @guide.author %>
 <br>
@@ -51,12 +51,12 @@
 <h2>Add a Comment:</h2>
 <%= form_for([@guide, @guide.comments.build]) do |f| %>
 <p>
-    <%= f.label :commenter %> <br>
+    <%= f.label :commenter %>
     <%= f.text_field :commenter %>
     
 </p>
 <p>
-    <%= f.label :body %><br>
+    <%= f.label :body %>
     <%= f.text_area :body %>
 </p>
 
