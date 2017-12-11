@@ -1,11 +1,11 @@
 <%= form_for :guide, url: guides_path do |f| %>
 <p id="newRecipe">
    <br>
+   <%= f.label :image %> <%= f.file_field :image %>
+   <br><br>
    <%= f.label :name %> <%= f.text_field :name %>
    <br><br>
    <%= f.label :author %> <%= f.text_field :author %>
-
-
 <br><br>
 <br>
 <%= f.label :difficulty %> <%= f.text_field :difficulty %>
