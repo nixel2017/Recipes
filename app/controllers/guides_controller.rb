@@ -46,5 +46,5 @@ end
 
 private
     def guide_params
-        params.require(:guide).permit(:name, :author, :difficulty, :ingredients)
+        params.require(:guide).permit(:name, :author, :image, :difficulty, :ingredients)
     end
