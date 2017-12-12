@@ -30,22 +30,23 @@
 <h2>Steps</h2>
 <% @guide.tasks.each do |task| %>
 <p>
-<br>
 <%= task.body %>
 </p>
 <% end %>
 
+<br>
+
 <h2>Comments</h2>
 <% @guide.comments.each do |comment| %>
-<p>
-    <strong>Commenter Name:</strong>
-    <%= comment.commenter %>
+<p id="comment">
+    Commenter Name:
+    <font color="#BA0056"><%= comment.commenter %></font>
 </p>
-<p>
-<strong>Comment:</strong>
-    <%= comment.body %>
+<p id="comment">
+    Comment:
+    <font color="#BA0056"><%= comment.body %></font>
 </p>
-<p>
+<p id="deleteButton">
     <%= link_to 'Delete Comment', [comment.guide, comment],
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
@@ -54,12 +55,12 @@
 
 <h2>Add a Comment:</h2>
 <%= form_for([@guide, @guide.comments.build]) do |f| %>
-<p>
+<p id="comment">
     <%= f.label :commenter %>
     <%= f.text_field :commenter %>
     
 </p>
-<p>
+<p id="comment">
     <%= f.label :body %>
     <%= f.text_area :body %>
 </p>

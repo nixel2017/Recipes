@@ -26,25 +26,27 @@
 <br><br>
 <%= f.label :ingredients %> <%= f.text_area :ingredients %>
 <br>
-<br><br>
 <p>
    <%= f.submit %>
    </p>
    <% end %>
- 
+
+<br>
+
 <h2>Steps</h2>
 <% @guide.tasks.each do |task| %>
 <p>
-<br>
 <%= task.body %>
 </p>
-<p>
+<p id="deleteButton">
     
     <%= link_to 'Delete Step', [task.guide, task],
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
 </p>
 <% end %>
+
+<br>
 
 <h2>Add a Step:</h2>
 <%= form_for([@guide, @guide.tasks.build]) do |f| %>
