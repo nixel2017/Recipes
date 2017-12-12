@@ -1,15 +1,19 @@
-<h1>New Recipe</h1>
+<h1>UNCC Recipes Book</h1>
 
 <nav id="topNav">
     <ul>
     <li><%= link_to 'Welcome', controller: 'welcome' %></li>
-    <li><%= link_to 'New Recipe', controller: 'guides', action: 'new' %></li>
+    <li id="current"><%= link_to 'New Recipe', controller: 'guides', action: 'new' %></li>
     <li><%= link_to 'Recipe List', controller: 'guides' %></li>
     </ul>
 </nav>
-<strong> <p><%= "Welcome to the New Recipes page. This is where you can start creating your new recipe." %>
+
+<br>
+
+<p id ="description"><%= "Welcome to the New Recipes page. This is where you can start creating your new recipe." %>
 <%= "Please fill out the form completely with you name as author, the name of your recipe, difficulty level and all the
-neccessary ingredients" %></p></strong>
+neccessary ingredients" %></p>
+
 <%= render 'form' %>
 
 <footer>

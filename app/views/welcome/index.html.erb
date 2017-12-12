@@ -2,15 +2,17 @@
 
 <nav id="topNav">
     <ul>
-    <li><%= link_to 'Welcome', controller: 'welcome' %></li>
+    <li id="current"><%= link_to 'Welcome', controller: 'welcome' %></li>
     <li><%= link_to 'New Recipe', controller: 'guides', action: 'new' %></li>
     <li><%= link_to 'Recipe List', controller: 'guides' %></li>
     </ul>
 </nav>
 
-<strong> <p><%= "Welcome to the University of North Carolina at Charlotte's personal student cookbook." %> 
+<br>
+
+<p id="description"><%= "Welcome to the University of North Carolina at Charlotte's personal student cookbook." %> 
 <%= "This website is created and maintained
-by UNCC students for the sole purpose of being a cookbook that can be used by UNCC students." %></p> </strong>
+by UNCC students for the sole purpose of being a cookbook that can be used by UNCC students." %></p>
 
 <footer>
 <%= "\u00A9" "2017 BitsPlease" %>

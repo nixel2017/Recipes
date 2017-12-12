@@ -7,19 +7,39 @@ body {
 
 h1 {
     font-size: 54px;
-    color: #383838;
+    color: black;
     font-family: Comic Sans MS;
     text-align: center;
 }
 
 h2 {
-    font-size: 25px;
-    color: #383838;
+    font-size: 20px;
+    color: black;
     font-family: Comic Sans MS;
 }
 
 p {
     font-family: Comic Sans MS;
+    font-size: 20px;
+    color: black;
+}
+
+#description {
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+}
+
+#current {
+    text-decoration: underline;
+}
+
+#pageName {
+    font-family: Comic Sans MS;
+    width: 70%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 #topNav ul {
@@ -41,28 +61,28 @@ p {
     line-height: 55px;
     font-size: 30px;
     font-family: Comic Sans MS;
-    color: #383838;
+    color: black;
     font-weight: bold;
 }
 
 #topNav a {
     text-decoration: none;
-    color: #383838;
+    color: black;
     display: block;
     transition: .3s background-color;
 }
 
 .content {
     font-family: Comic Sans MS;
-    color: #383838;
+    color: black;
     display: inline-block;
 }
 
 input[type=submit] {
     font-family: Comic Sans MS;
     border-radius: 12px;
-    color: #383838;
-    border: 2px solid #383838;
+    color: black;
+    border: 2px solid black;
     margin-left:27%;
 }
 
@@ -97,16 +117,19 @@ label {
 	width: 25%;
 	text-align:right;
 }
-    form p{
-text-align:left;
-footer {
-    position:fixed;bottom:0;
 
-    width:100%;
-    display:block;
+form p {
+    text-align:left;
 }
 
-    input{
+footer {
+    position:fixed;
+    bottom:0;
+    width:100%;
+    display:block;
+    font-family: Comic Sans MS
+    
+input{
 	margin-left:1em;
 
 }
