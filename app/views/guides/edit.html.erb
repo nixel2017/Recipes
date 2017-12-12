@@ -1,4 +1,5 @@
-<h1>Edit Recipe</h1>
+<h1>UNCC Recipes Book</h1>
+
 <nav id="topNav">
     <ul>
     <li><%= link_to 'Welcome', controller: 'welcome' %></li>
@@ -7,6 +8,9 @@
     </ul>
 </nav>
 
+<br>
+
+<p id="pageName">Edit a Recipe:</p>
 
 <div id="recipeSteps">
 <%= form_for :guide, url: guide_path(@guide), method: :patch do |f| %>

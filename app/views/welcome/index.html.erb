@@ -2,17 +2,24 @@
 
 <nav id="topNav">
     <ul>
-    <li><%= link_to 'Welcome', controller: 'welcome' %></li>
+    <li id="current"><%= link_to 'Welcome', controller: 'welcome' %></li>
     <li><%= link_to 'New Recipe', controller: 'guides', action: 'new' %></li>
     <li><%= link_to 'Recipe List', controller: 'guides' %></li>
     </ul>
 </nav>
 
-<strong> <p><%= "Welcome to the University of North Carolina at Charlotte's personal student cookbook." %> 
+<br>
+
+<p id="description"><%= "Welcome to the University of North Carolina at Charlotte's personal student cookbook." %> 
 <%= "This website is created and maintained
+<<<<<<< HEAD
 by UNCC students for the sole purpose of being a cookbook that can be used by UNCC students." %></p> </strong>
 <img src='RecipesWelcome.jpg' alt="Recipes">
 <%= image_tag("RecipesWelcome.jpg", :alt => "Recipes", :height => "30%", :width => "30%", :style => "float: center") %>
+=======
+by UNCC students for the sole purpose of being a cookbook that can be used by UNCC students." %></p>
+
+>>>>>>> d67a3a46f6ecea43b1fd2ed6b2be1b49ad442770
 <footer>
 <%= "\u00A9" "2017 BitsPlease" %>
 </footer>
